@@ -1,5 +1,4 @@
 --[[
-
 =====================================================================
 ==================== READ THIS BEFORE CONTINUING ====================
 =====================================================================
@@ -953,7 +952,7 @@ require('lazy').setup({
     'Exafunction/codeium.vim',
     event = 'BufEnter',
     config = function()
-      vim.keymap.set('i', '<C-y>', function()
+      vim.keymap.set('i', '<C-l>', function()
         return vim.fn['codeium#Accept']()
       end, { expr = true, silent = true })
       vim.keymap.set('i', '<C-;>', function()
@@ -972,7 +971,7 @@ require('lazy').setup({
     'vsskarthik/nvim-bufferlist',
     config = function()
       vim.keymap.set('n', '<leader><tab>', '<Cmd>:BufferListOpen<CR>', { desc = '[O]pen [B]uffer List' })
-    end
+    end,
   },
 
   -- ANY ADDITIONAL SETUP BELOW ----
